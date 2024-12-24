@@ -1,0 +1,354 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-content {
+  position: relative;
+  max-width: 300px; /* Menyesuaikan ukuran 3:4 */
+  max-height: 300px;
+  aspect-ratio: 1 / 1; /* Pastikan proporsi 3:4 */
+  overflow: hidden;
+}
+.popup-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.navbar {
+  position: sticky; /* Navbar tetap di atas */
+  top: 0; /* Posisi tetap di atas viewport */
+  z-index: 1000; /* Prioritas tinggi */
+  width: 100%; /* Lebar penuh */
+  background-color: #ffffff; /* Warna latar putih */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  display: flex; /* Tata letak fleksibel */
+  align-items: center; /* Konten rata tengah vertikal */
+  justify-content: space-between; /* Atur spasi antara logo dan menu */
+  padding: 0 16px; /* Padding kiri dan kanan */
+  height: 64px; /* Tinggi navbar */
+}
+
+.navbar .container {
+  max-width: 1200px; /* Lebar maksimum kontainer */
+  margin: 0 auto; /* Pusatkan kontainer */
+  display: flex; /* Atur konten dalam baris */
+  align-items: center; /* Rata tengah vertikal */
+  justify-content: space-between; /* Pisahkan logo dan menu */
+}
+
+.navbar img {
+  height: 50px; /* Tinggi logo */
+  width: auto; /* Lebar otomatis */
+  margin-right: 8px; /* Jarak antara logo dan teks */
+}
+
+.company-name {
+  font-size: 18px; /* Ukuran font nama perusahaan */
+  font-weight: bold; /* Ketebalan font */
+  color: #000; /* Warna teks */
+}
+
+.navbar a {
+  text-decoration: none; /* Hilangkan garis bawah */
+  color: #333; /* Warna teks */
+  font-size: 15px; /* Ukuran font */
+  font-weight: 500; /* Ketebalan font */
+  margin: 0 12px; /* Spasi antara menu */
+  line-height: 64px; /* Agar menu sejajar vertikal */
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #007BFF; /* Warna hover teks */
+}
+
+#menuItems {
+  display: flex; /* Tata letak baris */
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  #menuItems {
+    display: none; /* Sembunyikan menu pada mobile */
+    flex-direction: column; /* Tata letak kolom */
+    position: absolute; /* Posisi dropdown */
+    top: 64px; /* Jarak dari navbar */
+    right: 0;
+    left: 0;
+    background-color: #fff; /* Latar dropdown */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan dropdown */
+    padding: 8px 0;
+  }
+
+  #menuToggle {
+    display: block; /* Tampilkan tombol toggle */
+  }
+}
+
+.hidden {
+  display: none; /* Sembunyikan elemen */
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animasi perpindahan */
+  width: 100%; /* Buat fleksibel */
+}
+.carousel img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 300px;
+  flex-shrink: 0; /* Pastikan gambar tidak mengecil */
+}
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10;
+}
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+/* Styling untuk bagian Our Partners */
+/* Styling untuk bagian Our Partners */
+
+.partners-grid {
+display: flex;
+flex-wrap: wrap; /* Agar logo turun ke baris berikutnya jika tidak muat */
+justify-content: center; /* Menjaga logo tetap di tengah */
+gap: 20px; /* Jarak antar logo */
+}
+
+.partner-logo {
+width: 100px; /* Ukuran lebar logo */
+height: 100px; /* Ukuran tinggi logo tetap */
+object-fit: contain; /* Menjaga proporsi gambar */
+transition: transform 0.3s, box-shadow 0.3s; /* Animasi saat hover */
+cursor: pointer; /* Menunjukkan elemen interaktif */
+border: 1px solid #ddd; /* Opsional: Menambahkan border untuk rapi */
+border-radius: 10px; /* Opsional: Membuat sudut gambar membulat */
+padding: 5px; /* Opsional: Memberikan ruang ekstra untuk gambar */
+background-color: white; /* Opsional: Memberikan latar belakang putih */
+}
+
+.scroll-container {
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow-x: auto; /* Default: scroll hanya jika diperlukan */
+}
+
+.scroll-container > div {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+  min-width: 300px;
+  max-width: 100%;
+}
+
+/* Scrollbar styling */
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #1e40af, #60a5fa);
+  border-radius: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #1d4ed8, #3b82f6);
+}
+
+/* Tampilan Mobile (Perbaikan teks detail yang terpotong) */
+@media screen and (max-width: 768px) {
+  .scroll-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto; /* Scroll horizontal tetap aktif */
+      gap: 0.25rem; /* Perkecil jarak antar elemen */
+      padding: 0.5rem; /* Padding di dalam container */
+      scroll-snap-type: x mandatory; /* Scroll snap horizontal */
+      scroll-padding: 0; /* Hilangkan padding untuk scroll */
+  }
+
+  .scroll-container > div {
+      scroll-snap-align: start; /* Snap pada awal elemen */
+      flex: 0 0 calc(50% - 0.125rem); /* Lebar elemen 50% dikurangi jarak antar elemen */
+      white-space: normal; /* Membungkus teks */
+      overflow: visible; /* Teks terlihat sepenuhnya */
+      text-align: center; /* Teks rata tengah */
+      min-height: 120px; /* Tinggi minimum */
+      padding: 1rem; /* Ruang untuk teks */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi pada transform dan shadow */
+  }
+
+  .scroll-container > div:hover {
+      transform: scale(1.03); /* Memperbesar elemen saat kursor berada di atasnya */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Memberikan bayangan saat hover */
+  }
+}
+
+/* Tampilan Desktop */
+@media screen and (min-width: 769px) {
+  .scroll-container {
+      flex-wrap: wrap; /* Tampilkan semua paket dalam satu halaman */
+      overflow-x: visible; /* Hapus scroll horizontal */
+      justify-content: center; /* Pusatkan item */
+      white-space: normal; /* Izinkan wrap teks normal */
+      align-items: center; /* Menjaga elemen tetap sejajar secara vertikal */
+  }
+
+  .scroll-container > div {
+      flex: 0 1 calc(25% - 1.5rem); /* Atur lebar tiap paket agar tampil 4 per baris */
+      min-width: 250px; /* Lebar minimum agar tidak terlalu kecil */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi pada transform dan shadow */
+      margin: 1rem; /* Menambahkan jarak antar elemen */
+  }
+
+  .scroll-container > div:hover {
+      transform: scale(1.05); /* Memperbesar elemen saat kursor berada di atasnya */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Memberikan bayangan saat hover */
+  }
+}
+
+.partner-logo:hover {
+transform: scale(1.2); /* Membesarkan logo saat hover */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat hover */
+}
+.faq-container {
+max-width: 800px;
+margin: 0 auto;
+}
+
+.faq-item {
+margin-bottom: 10px;
+}
+
+.faq-question {
+background-color: #f4f4f4;
+padding: 15px;
+width: 100%;
+text-align: left;
+border: none;
+cursor: pointer;
+font-size: 18px;
+font-weight: bold;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+background-color: #007BFF; /* Warna biru */
+color: #fff; /* Ubah teks menjadi putih untuk kontras */
+}
+
+.faq-answer {
+display: none;
+padding: 10px 15px;
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+.faq-answer p {
+margin: 0;
+}
+.partners-slider-wrapper {
+  height: auto;
+}
+
+.partners-slider {
+  display: flex;
+  align-items: center;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px); /* Elemen mulai dari bawah */
+  transition: all 0.8s ease-out; /* Durasi dan transisi */
+  }
+  
+  .animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0); /* Elemen bergerak ke posisi semula */
+  }
