@@ -1,5 +1,7 @@
-@include('popup')
-@include('header')
+@extends('layouts.app')
+
+@section('main')
+@include('components.popup')
 <style>
     /* Menambahkan tinggi besar pada banner */
 .banner-area {
@@ -79,8 +81,8 @@
 </section>
 
 
-@include('package')
-@include('faq')
-@include('partners')
-@include('contact')
-@include('footer')
+@include('components.package')
+@include('components.faq')
+@include('components.partners')
+@include('components.contact')
+@endsection

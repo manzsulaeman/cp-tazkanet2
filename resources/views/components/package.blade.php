@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Packages</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS (Animate On Scroll) CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-    <!-- Custom Stylesheet -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-    <script>
-        // Initialize AOS
-        document.addEventListener('DOMContentLoaded', () => {
-            AOS.init({
-                duration: 1000, // Duration of animations in milliseconds
-                once: true, // Whether the animation should only happen once
-            });
-        });
-    </script>
-</head>
-<body class="bg-gray-50">
 
     <!-- Features Section -->
     <section class="py-16 bg-gray-100" id="package">
@@ -75,7 +45,7 @@
     </section>
 
     <!-- Product Section -->
-    <section class="py-16 bg-gradient-to-r from-gray-100" 
+    <section class="py-16 bg-gradient-to-r from-gray-100"
         style="background-image: url('/img/gg.jpg'); background-size: cover; background-position: center; filter: brightness(105%);">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-semibold text-gray-800">Broadband Internet Package</h2>
@@ -85,7 +55,7 @@
             <div class="relative mt-10">
                 <!-- Packages container for horizontal scrolling -->
                 <div class="scroll-container flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4">
-                    
+
                     <!-- Paket Hemat -->
                     <div data-aos="zoom-in" class="bg-gradient-to-r from-blue-500 to-blue-300 rounded-xl overflow-hidden shadow-lg hover:scale-105 hover:opacity-80 transform transition-all duration-300 ease-in-out min-w-[280px] lg:w-auto snap-center">
                         <img src="img/10.jpg" alt="Paket Hemat" class="w-full h-48 object-cover rounded-t-xl">
@@ -174,6 +144,3 @@
             </div>
         </div>
     </section>
-
-</body>
-</html>
