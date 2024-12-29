@@ -1,19 +1,9 @@
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Override for text alignment on smaller screens */
-    @media (max-width: 1024px) {
-      .lg\:text-left {
-        text-align: left; /* Forces left alignment */
-      }
-    }
-  </style>
-</head>
-<body>
+
 
   <!-- About Us Section -->
   <section class="bg-cover bg-center py-16" style="background-image: url('img/gg.jpg');">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6 lg:px-20">
-      
+
       <!-- Left Column -->
       <div data-aos="fade-right" class="text-center lg:text-left">
         <h1 class="text-4xl font-extrabold text-gray-900">About Us</h1>
@@ -40,7 +30,7 @@
   <div class="container mx-auto text-center">
     <h2 class="text-3xl font-bold text-gray-800">Outstanding Service</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-      
+
       <!-- Internet Broadband -->
       <div data-aos="fade-up" class="service-box">
         <div class="image-wrapper">
@@ -100,53 +90,3 @@
   </div>
 </section>
 
-<style>
-  /* Base Styling */
-  .service-box {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-box:hover {
-    transform: scale(1.05); /* Efek zoom ringan */
-    opacity: 0.95;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Image Wrapper */
-  .image-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Proporsi gambar tetap (16:9) */
-    overflow: hidden;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Responsive Adjustments */
-  @media (max-width: 640px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 kolom di mobile */
-      gap: 8px; /* Kurangi jarak antar elemen */
-    }
-
-    .service-box {
-      padding: 0.5rem; /* Kurangi padding di dalam box */
-    }
-
-    .service-box h3 {
-      font-size: 1rem; /* Perkecil ukuran heading */
-    }
-
-    .service-box p {
-      font-size: 0.875rem; /* Perkecil ukuran teks */
-    }
-  }
-</style>

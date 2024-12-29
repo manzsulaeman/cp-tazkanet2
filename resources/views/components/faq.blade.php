@@ -1,5 +1,3 @@
-<!-- Include AOS library in the head of your HTML -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <section class="faq-section py-5" style="background-color: #f9f9f9;">
     <div class="container">

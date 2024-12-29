@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Section</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
 
 <section id="contact" class="py-5">
     <div class="container">
@@ -44,8 +34,8 @@
             <!-- Map and Contact Info Section -->
             <div class="col-lg-6">
                 <div class="mb-4">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63375.24468649255!2d108.1448395!3d-7.1832448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f4ff3220dbaff%3A0x1ad43633b02a25c6!2sTazka%20Net!5e0!3m2!1sen!2sid!4v1697111116040!5m2!1sen!2sid" 
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63375.24468649255!2d108.1448395!3d-7.1832448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f4ff3220dbaff%3A0x1ad43633b02a25c6!2sTazka%20Net!5e0!3m2!1sen!2sid!4v1697111116040!5m2!1sen!2sid"
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
 

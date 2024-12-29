@@ -13,14 +13,89 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     @stack('style')
 
-    <!-- AOS (Animate On Scroll) CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Base Styling */
+        .service-box {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: scale(1.05);
+            /* Efek zoom ringan */
+            opacity: 0.95;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Image Wrapper */
+        .image-wrapper {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            /* Proporsi gambar tetap (16:9) */
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 640px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 kolom di mobile */
+                gap: 8px;
+                /* Kurangi jarak antar elemen */
+            }
+
+            .service-box {
+                padding: 0.5rem;
+                /* Kurangi padding di dalam box */
+            }
+
+            .service-box h3 {
+                font-size: 1rem;
+                /* Perkecil ukuran heading */
+            }
+
+            .service-box p {
+                font-size: 0.875rem;
+                /* Perkecil ukuran teks */
+            }
+        }
+    </style>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Override for text alignment on smaller screens */
+        @media (max-width: 1024px) {
+            .lg\:text-left {
+                text-align: left;
+                /* Forces left alignment */
+            }
+        }
+    </style>
+
 
     <style>
         body {
@@ -49,7 +124,8 @@
 
         @media (max-width: 768px) {
             .logo {
-                max-width: 120px; /* Smaller size for mobile */
+                max-width: 120px;
+                /* Smaller size for mobile */
             }
         }
 
@@ -193,7 +269,7 @@
         // Handle dropdown toggle
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-                toggle.addEventListener('click', function (e) {
+                toggle.addEventListener('click', function(e) {
                     e.preventDefault();
 
                     const menu = this.nextElementSibling;
@@ -205,7 +281,7 @@
                 });
             });
 
-            document.addEventListener('click', function (e) {
+            document.addEventListener('click', function(e) {
                 const target = e.target;
                 document.querySelectorAll('.dropdown-menu').forEach(menu => {
                     if (!menu.contains(target) && !menu.previousElementSibling.contains(target)) {
@@ -246,7 +322,6 @@
         }
 
         setInterval(showNextImage, 5000);
-
     </script>
 
     @stack('scripts')
